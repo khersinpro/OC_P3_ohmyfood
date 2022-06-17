@@ -1,4 +1,10 @@
-@import './utils/variables';
-@import './utils/extensions';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap');
+@import './utils/_variables';
+@import './utils/_extensions';
 
-@import './base/base'
+@import './base/_base';
+@import './layout/_loader.scss';
+@import "./layout/header";
+@import './layout/footer';
+
+@import './pages/_index.scss';
