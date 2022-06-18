@@ -156,7 +156,7 @@ main{
         grid-gap: 40px;
         padding: 80px 10% 35px;
     }
-    @media(min-with: $large-screen) {
+    @media(min-width: $large-screen) {
         grid-template-rows: repeat(2, 400px);
     }
     h2{

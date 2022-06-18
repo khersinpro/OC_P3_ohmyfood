@@ -263,7 +263,7 @@ main {
     padding: 80px 10% 35px;
   }
 }
-@media (min-with: 1550px) {
+@media (min-width: 1550px) {
   .restaurant {
     grid-template-rows: repeat(2, 400px);
   }
