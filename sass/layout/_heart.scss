@@ -1,0 +1,33 @@
+ //*** button with heart annimation ***//
+ .heart-container{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    height: 25px;
+    width: 25px;
+    i{
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+    }
+    .colored{
+        opacity: 0;
+        transition:  0.3s ease-in-out;
+    }
+    .nocolor{
+        transition: 0.3s ease-in;
+        color: #000;
+    }
+    &:hover .colored{
+        opacity: 1;
+        background: -webkit-gradient(linear, left top, left bottom, from($secondary), to($primary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    &:hover .nocolor{
+        opacity: 0;
+    }
+}

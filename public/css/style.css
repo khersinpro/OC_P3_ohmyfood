@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-.guide__box--number, .guide, .location__explorer--button, .location__explorer, .location__choice, header, .intro {
+.menu__container, .guide__box--number, .guide, .location__explorer--button, .location__explorer, .location__choice, header, .intro {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.restaurant__box--txt {
+.menu__container--box .names, .menu .titleContainer, .restaurant__box--txt {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.menu .titleContainer h1 {
+  font-family: "Shrikhand", cursive;
 }
 
 * {
@@ -66,11 +70,53 @@ a {
   animation: rotate 3 1s linear;
 }
 
+.heart-container {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  height: 25px;
+  width: 25px;
+}
+.heart-container i {
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.heart-container .colored {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.heart-container .nocolor {
+  transition: 0.3s ease-in;
+  color: #000;
+}
+.heart-container:hover .colored {
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart-container:hover .nocolor {
+  opacity: 0;
+}
+
 header {
   width: 100%;
   height: 80px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-  padding: 10px 0 0;
+  padding: 10px 0 10px;
+  position: relative;
+}
+header .header-arrow {
+  font-size: 25px;
+  color: #000;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 header img {
   height: 40px;
@@ -339,37 +385,62 @@ main {
 .restaurant__box--txt .textbox p {
   font-size: 17px;
 }
-.restaurant__box--txt .heart-container {
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
+
+.presentation {
+  width: 100%;
+}
+.presentation img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+}
+
+.menu {
   position: relative;
-  height: 25px;
-  width: 25px;
+  z-index: 2;
+  width: 100%;
+  transform: translateY(-20px);
+  border-radius: 40px 40px 0 0px;
+  padding: 35px 0 0;
+  background: #f6f6f6;
 }
-.restaurant__box--txt .heart-container i {
-  font-size: 25px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 3;
+.menu .titleContainer {
+  width: 100%;
+  padding: 0px 35px;
 }
-.restaurant__box--txt .heart-container .colored {
-  opacity: 0;
-  transition: 0.3s ease-in-out;
+.menu .titleContainer h1 {
+  font-size: 24px;
 }
-.restaurant__box--txt .heart-container .nocolor {
-  transition: 0.3s ease-in;
-  color: #000;
+.menu__container {
+  flex-direction: column;
+  width: 100%;
 }
-.restaurant__box--txt .heart-container:hover .colored {
-  opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.menu__container h2 {
+  margin: 35px 0 0;
+  width: 90%;
+  font-size: 19px;
+  font-weight: 400;
 }
-.restaurant__box--txt .heart-container:hover .nocolor {
-  opacity: 0;
+.menu__container--box {
+  width: 90%;
+  margin: 10px 0;
+  border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+.menu__container--box h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.menu__container--box .names--txt {
+  margin-right: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu__container--box .names--price {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */

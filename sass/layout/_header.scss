@@ -3,7 +3,16 @@ header{
     height: 80px;
     @extend %flex-center;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.20);
-    padding: 10px 0 0;
+    padding: 10px 0 10px;
+    position: relative;
+    .header-arrow{
+        font-size: 25px;
+        color: #000;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     img{
         height: 40px;
         width: 160px;

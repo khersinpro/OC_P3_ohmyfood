@@ -4,7 +4,9 @@
 
 @import './base/_base';
 @import './layout/_loader.scss';
+@import './layout/heart';
 @import "./layout/header";
 @import './layout/footer';
 
 @import './pages/_index.scss';
+@import './pages/restaurant.scss';
