@@ -234,7 +234,7 @@ main {
 .restaurant__box--txt .textbox p {
   font-size: 17px;
 }
-.restaurant__box--txt button {
+.restaurant__box--txt .heart-container {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -242,27 +242,27 @@ main {
   height: 25px;
   width: 25px;
 }
-.restaurant__box--txt button i {
+.restaurant__box--txt .heart-container i {
   font-size: 25px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
 }
-.restaurant__box--txt button .colored {
+.restaurant__box--txt .heart-container .colored {
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
-.restaurant__box--txt button .nocolor {
+.restaurant__box--txt .heart-container .nocolor {
   transition: 0.3s ease-in;
 }
-.restaurant__box--txt button:hover .colored {
+.restaurant__box--txt .heart-container:hover .colored {
   opacity: 1;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.restaurant__box--txt button:hover .nocolor {
+.restaurant__box--txt .heart-container:hover .nocolor {
   opacity: 0;
 }
 
