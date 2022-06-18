@@ -74,10 +74,26 @@ main{
     @extend %flex-center;
     flex-direction: column;
     padding: 35px 0px;
+    @media(min-width: $desktop){
+        flex-direction: row;
+        padding: 65px 0 35px;
+        position: relative;
+    }
     h2{
         font-size: 24px;
         margin: 15px 0 20px;
         width: 80%;
+        @media(min-width: $tablet) {
+            width: 450px;
+            margin: 10px 0 25px;
+        }
+        @media(min-width: $desktop){
+            width: auto;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
     &__box{
         width: 85%;
@@ -91,6 +107,13 @@ main{
         border-radius: 15px;
         padding-left: 30px;
         font-weight: 500;
+        @media(min-width: $tablet) {
+            width: 450px;
+        }
+        @media(min-width: $desktop){
+            width: 250px;
+            margin: 20px 20px ;
+        }
         &--number{
             height: 25px;
             width: 25px;
@@ -125,10 +148,31 @@ main{
     @extend %flex-center;
     flex-direction: column;
     background: $light-grey;
+    @media(min-width: $desktop){
+        display: grid;
+        grid-template-rows: repeat(2, 300px);
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+        grid-gap: 40px;
+        padding: 80px 10% 35px;
+    }
+    @media(min-with: $large-screen) {
+        grid-template-rows: repeat(2, 400px);
+    }
     h2{
         font-size: 24px;
         margin: 15px 0 20px;
         width: 80%;
+        @media(min-width: $tablet) {
+            width: 450px;
+        }
+        @media(min-width: $desktop){
+            width: auto;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 
     //*** restaurant card ***//
@@ -140,10 +184,21 @@ main{
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
         border-radius: 10px;
         overflow-y: hidden;
+        @media(min-width: $tablet) {
+            width: 450px;
+        }
+        @media(min-width: $desktop){
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
         &--img{
             width: 100%;
             height: 180px;
-            object-fit: cover;            
+            object-fit: cover;      
+            @media(min-width: $desktop){
+                height: calc(100% - 80px);
+            }      
         }
         &--new{
             position: absolute;
@@ -191,6 +246,7 @@ main{
                 }
                 .nocolor{
                     transition: 0.3s ease-in;
+                    color: #000;
                 }
                 &:hover .colored{
                     opacity: 1;
