@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-.restaurant, .guide__box--number, .guide, .location__explorer--button, .location__explorer, .location__choice, header, .intro {
+.guide__box--number, .guide, .location__explorer--button, .location__explorer, .location__choice, header, .intro {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,12 +250,20 @@ main {
 .restaurant {
   width: 100%;
   padding: 35px 0;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 85%;
+  grid-template-rows: 30px repeat(4, 260px);
+  row-gap: 25px;
+  justify-content: center;
   background: #f6f6f6;
+}
+@media (min-width: 768px) {
+  .restaurant {
+    grid-template-columns: 70%;
+  }
 }
 @media (min-width: 992px) {
   .restaurant {
-    display: grid;
     grid-template-rows: repeat(2, 300px);
     grid-template-columns: repeat(2, 1fr);
     position: relative;
@@ -270,7 +278,6 @@ main {
 }
 .restaurant h2 {
   font-size: 24px;
-  margin: 15px 0 20px;
   width: 80%;
 }
 @media (min-width: 768px) {
@@ -288,18 +295,13 @@ main {
   }
 }
 .restaurant__box {
-  height: 260px;
-  width: 85%;
+  height: 100%;
+  width: 100%;
   position: relative;
   margin: 0 0 25px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   overflow-y: hidden;
-}
-@media (min-width: 768px) {
-  .restaurant__box {
-    width: 450px;
-  }
 }
 @media (min-width: 992px) {
   .restaurant__box {
@@ -310,13 +312,8 @@ main {
 }
 .restaurant__box--img {
   width: 100%;
-  height: 180px;
+  height: calc(100% - 80px);
   object-fit: cover;
-}
-@media (min-width: 992px) {
-  .restaurant__box--img {
-    height: calc(100% - 80px);
-  }
 }
 .restaurant__box--new {
   position: absolute;
