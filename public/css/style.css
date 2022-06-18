@@ -5,6 +5,12 @@
   align-items: center;
 }
 
+.restaurant__box--txt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +21,10 @@
 body {
   min-height: 100vh;
   position: relative;
+}
+
+a {
+  text-decoration: none;
 }
 
 @keyframes rotate {
@@ -186,8 +196,8 @@ main {
   width: 80%;
 }
 .restaurant__box {
-  height: 250px;
-  width: 80%;
+  height: 260px;
+  width: 90%;
   position: relative;
   margin: 0 0 25px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
@@ -196,7 +206,7 @@ main {
 }
 .restaurant__box--img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
 }
 .restaurant__box--new {
@@ -206,7 +216,48 @@ main {
 }
 .restaurant__box--txt {
   width: 100%;
-  height: 50px;
+  height: 80px;
+  padding: 0 20px 0 10px;
+}
+.restaurant__box--txt .textbox {
+  color: #000;
+}
+.restaurant__box--txt .textbox h3 {
+  font-size: 18px;
+}
+.restaurant__box--txt .textbox p {
+  font-size: 17px;
+}
+.restaurant__box--txt button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  height: 25px;
+  width: 25px;
+}
+.restaurant__box--txt button i {
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.restaurant__box--txt button .colored {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.restaurant__box--txt button .nocolor {
+  transition: 0.3s ease-in;
+}
+.restaurant__box--txt button:hover .colored {
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurant__box--txt button:hover .nocolor {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
