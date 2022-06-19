@@ -461,6 +461,46 @@ main {
     font-size: 30px;
   }
 }
+.menu .list-anim1 {
+  animation: list-anim 0.5s ease-in-out forwards;
+  animation-delay: 100ms;
+}
+.menu .list-anim2 {
+  animation: list-anim 0.5s ease-in-out forwards;
+  animation-delay: 200ms;
+}
+.menu .list-anim3 {
+  animation: list-anim 0.5s ease-in-out forwards;
+  animation-delay: 300ms;
+}
+.menu .list-anim4 {
+  animation: list-anim 0.5s ease-in-out forwards;
+  animation-delay: 400ms;
+}
+.menu .list-anim5 {
+  animation: list-anim 0.5s ease-in-out forwards;
+  animation-delay: 500ms;
+}
+.menu .list-anim6 {
+  animation: list-anim 0.5s ease-in-out forwards;
+  animation-delay: 600ms;
+}
+.menu .list-anim7 {
+  animation: list-anim 0.5s ease-in-out forwards;
+  animation-delay: 700ms;
+}
+.menu .list-anim8 {
+  animation: list-anim 0.5s ease-in-out forwards;
+  animation-delay: 800ms;
+}
+.menu .list-anim9 {
+  animation: list-anim 0.5s ease-in-out forwards;
+  animation-delay: 900ms;
+}
+.menu .list-anim10 {
+  animation: list-anim 0.5s ease-in-out forwards;
+  animation-delay: 1000ms;
+}
 .menu__container {
   flex-direction: column;
   width: 100%;
@@ -491,21 +531,6 @@ main {
   position: absolute;
   left: 1px;
   bottom: -4px;
-}
-.menu__container .list-anim {
-  animation: list-anim 1s ease-in-out forwards;
-}
-.menu__container .list-anim:nth-child(2) {
-  animation-delay: 100ms;
-}
-.menu__container .list-anim:nth-child(3) {
-  animation-delay: 150ms;
-}
-.menu__container .list-anim:nth-child(4) {
-  animation-delay: 200ms;
-}
-.menu__container .list-anim:nth-child(5) {
-  animation-delay: 250ms;
 }
 .menu__container--box {
   width: 90%;

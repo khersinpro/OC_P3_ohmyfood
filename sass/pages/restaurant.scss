@@ -67,7 +67,14 @@
                 font-size: 30px;
             }
         }
-    } 
+    }
+
+    @for $i from 1 through 10 {
+        .list-anim#{$i} {
+            animation: list-anim 0.5s ease-in-out forwards;
+            animation-delay: 100ms * $i;
+        }
+    }
     &__container{
         @extend %flex-center;
         flex-direction: column;
@@ -96,14 +103,7 @@
             bottom: -4px;
         }
         //*** liste animation ***//
-        .list-anim{
-            animation: list-anim 1s ease-in-out forwards;
-            @for $i from 2 through 5 {
-                &:nth-child(#{$i}) {
-                    animation-delay: 50ms * $i;
-                }
-            }
-        }
+
         &--box{
             width: 90%;
             margin: 10px 0;
