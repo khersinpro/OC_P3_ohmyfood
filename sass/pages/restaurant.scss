@@ -6,21 +6,35 @@
         transform: rotate(360deg);
     }
 }
+@keyframes list-anim {
+    from{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
 
 
+.restaurant-main{
+    background: $light-grey;
+}
 .presentation{
     width: 100%;
     img{
         width: 100%;
-        height: 270px;
+        height: 300px;
         object-fit: cover;
     }
 }
+
 .menu{
     position: relative;
     z-index: 2;
     max-width: 100%;
-    transform: translateY(-20px);
+    transform: translateY(-45px);
     border-radius: 40px 40px 0 0px;
     padding: 35px 0 0;
     background: $light-grey;
@@ -32,7 +46,7 @@
             @extend %title-font;
             font-size: 24px;
         }
-    }
+    } 
     &__container{
         @extend %flex-center;
         flex-direction: column;
@@ -53,6 +67,15 @@
             left: 1px;
             bottom: -4px;
         }
+        //*** liste animation ***//
+        .list-anim{
+            animation: list-anim 1s ease-in-out forwards;
+            @for $i from 2 through 5 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 50ms * $i;
+                }
+            }
+        }
         &--box{
             width: 90%;
             margin: 10px 0;
@@ -64,6 +87,7 @@
             justify-content: start;
             height: 72px;
             overflow: hidden;
+            transform: rotateY(15px);
             .left-container{
                 width: 100%;
                 margin: 0 25px 0 15px;

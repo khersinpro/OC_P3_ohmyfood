@@ -394,12 +394,26 @@ main {
     transform: rotate(360deg);
   }
 }
+@keyframes list-anim {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.restaurant-main {
+  background: #f6f6f6;
+}
+
 .presentation {
   width: 100%;
 }
 .presentation img {
   width: 100%;
-  height: 270px;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -407,7 +421,7 @@ main {
   position: relative;
   z-index: 2;
   max-width: 100%;
-  transform: translateY(-20px);
+  transform: translateY(-45px);
   border-radius: 40px 40px 0 0px;
   padding: 35px 0 0;
   background: #f6f6f6;
@@ -439,6 +453,21 @@ main {
   left: 1px;
   bottom: -4px;
 }
+.menu__container .list-anim {
+  animation: list-anim 1s ease-in-out forwards;
+}
+.menu__container .list-anim:nth-child(2) {
+  animation-delay: 100ms;
+}
+.menu__container .list-anim:nth-child(3) {
+  animation-delay: 150ms;
+}
+.menu__container .list-anim:nth-child(4) {
+  animation-delay: 200ms;
+}
+.menu__container .list-anim:nth-child(5) {
+  animation-delay: 250ms;
+}
 .menu__container--box {
   width: 90%;
   margin: 10px 0;
@@ -450,6 +479,7 @@ main {
   justify-content: start;
   height: 72px;
   overflow: hidden;
+  transform: rotateY(15px);
 }
 .menu__container--box .left-container {
   width: 100%;
