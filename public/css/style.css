@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.menu__container--box .names, .menu .titleContainer, .restaurant__box--txt {
+.menu__container--box .left-container .names, .menu .titleContainer, .restaurant__box--txt {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -386,6 +386,14 @@ main {
   font-size: 17px;
 }
 
+@keyframes check-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .presentation {
   width: 100%;
 }
@@ -424,23 +432,55 @@ main {
 .menu__container--box {
   width: 90%;
   margin: 10px 0;
-  border-radius: 10px;
+  border-radius: 15px;
   background: #FFFFFF;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  padding: 15px;
+  display: flex;
+  align-items: center;
+  height: 72px;
+  overflow: hidden;
 }
-.menu__container--box h3 {
+.menu__container--box .left-container {
+  width: 100%;
+  margin: 0 25px 0 15px;
+  overflow: hidden;
+}
+.menu__container--box .left-container h3 {
   font-size: 18px;
   margin-bottom: 5px;
-}
-.menu__container--box .names--txt {
-  margin-right: 15px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.menu__container--box .names--price {
+.menu__container--box .left-container .names--txt {
+  margin-right: 15px;
+  font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.menu__container--box .left-container .names--price {
   font-weight: 700;
+}
+.menu__container--box .anim-box {
+  background: #99E2D0;
+  height: 100%;
+  width: 0px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+.menu__container--box .anim-box .fa-circle-check {
+  font-size: 28px;
+  color: white;
+  transform: rotate(0deg);
+  margin: 0 0 0 16.7px;
+}
+.menu__container--box:hover .anim-box {
+  width: 80px;
+}
+.menu__container--box:hover .fa-circle-check {
+  animation: check-rotate 0.3s forwards linear;
 }
 
 /*# sourceMappingURL=style.css.map */

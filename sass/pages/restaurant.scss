@@ -1,3 +1,13 @@
+@keyframes check-rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
 .presentation{
     width: 100%;
     img{
@@ -36,26 +46,57 @@
         &--box{
             width: 90%;
             margin: 10px 0;
-            border-radius: 10px;
+            border-radius: 15px;
             background: #FFFFFF;
             box-shadow: 0 5px 10px rgba(0, 0, 0, 0.10);
-            padding: 15px ;
-            h3{
-                font-size: 18px;
-                margin-bottom: 5px;
-            }
-            .names{
-                @extend %flex-between;
-                &--txt{
-                    margin-right: 15px;
+            display: flex;
+            align-items: center;
+            height: 72px;
+            overflow: hidden;
+            .left-container{
+                width: 100% ;
+                margin: 0 25px 0 15px;
+                overflow: hidden;
+                h3{
+                    font-size: 18px;
+                    margin-bottom: 5px;
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    
                 }
-                &--price{
-                    font-weight: 700;
+                .names{
+                    @extend %flex-between;
+                    &--txt{
+                        margin-right: 15px;
+                        font-size: 15px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;         
+                    }
+                    &--price{
+                        font-weight: 700;
+                    }
                 }
+            }
+            .anim-box{
+                background: $tertiary;
+                height: 100%;
+                width: 0px;
+                display: flex;
+                align-items: center;
+                transition: all 0.3s;
+                .fa-circle-check{
+                    font-size: 28px;
+                    color: white;
+                    transform: rotate(0deg);
+                    margin: 0 0 0 16.7px ;
+                }
+            }
+            &:hover .anim-box{
+                width: 80px;
+            }
+            &:hover .fa-circle-check{
+                animation: check-rotate 0.3s forwards linear;
             }
         }
     }
