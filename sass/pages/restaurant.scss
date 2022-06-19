@@ -40,27 +40,51 @@
     max-width: 100%;
     margin-top: 250px;
     border-radius: 40px 40px 0 0px;
-    padding: 35px 0 0;
+    padding: 35px 0 20px;
     background: $light-grey;
+    @media(min-width: $desktop-menu) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+        padding: 130px 3% 180px;
+    }
     .titleContainer{
-        width: 100%;
-        padding: 0px 35px;
+        width: 90%;
+        margin: 0 auto;
         @extend %flex-between;
+        @media(min-width: $desktop-menu){
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+        }
         h1{
             @extend %title-font;
             font-size: 24px;
+            @media(min-width: $desktop-menu){
+                font-size: 30px;
+            }
         }
     } 
     &__container{
         @extend %flex-center;
         flex-direction: column;
         width: 100%;
+        @media(min-width: $desktop-menu){
+            width: 33%;
+        }
         h2{
             margin: 35px 0 10px;
             width: 90%;
             font-size: 19px;
             font-weight: 400;
             position: relative;
+            @media(min-width: $desktop-menu){
+                font-size: 21px;
+                margin: 35px 0 30px;
+            }
         }
         h2::after{
             content: "";
@@ -93,6 +117,9 @@
             overflow: hidden;
             transform: translateY(15px);
             opacity: 0;
+            @media(min-width: $desktop-menu){
+                height: 80px;
+            }
             .left-container{
                 width: 100%;
                 margin: 0 25px 0 15px;
@@ -148,6 +175,13 @@
         width: 100%;
         padding: 50px 0;
         @extend %flex-center;
+        @media(min-width: $desktop-menu){
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px;
+        }
         button{
             width: 180px;
             height: 60px;

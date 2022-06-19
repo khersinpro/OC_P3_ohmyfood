@@ -296,7 +296,7 @@ main {
 
 .restaurant {
   width: 100%;
-  padding: 35px 0;
+  padding: 35px 0 55px;
   display: grid;
   grid-template-columns: 85%;
   grid-template-rows: 30px repeat(4, 260px);
@@ -428,19 +428,47 @@ main {
   max-width: 100%;
   margin-top: 250px;
   border-radius: 40px 40px 0 0px;
-  padding: 35px 0 0;
+  padding: 35px 0 20px;
   background: #f6f6f6;
 }
+@media (min-width: 1200px) {
+  .menu {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    padding: 130px 3% 180px;
+  }
+}
 .menu .titleContainer {
-  width: 100%;
-  padding: 0px 35px;
+  width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 1200px) {
+  .menu .titleContainer {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+  }
 }
 .menu .titleContainer h1 {
   font-size: 24px;
 }
+@media (min-width: 1200px) {
+  .menu .titleContainer h1 {
+    font-size: 30px;
+  }
+}
 .menu__container {
   flex-direction: column;
   width: 100%;
+}
+@media (min-width: 1200px) {
+  .menu__container {
+    width: 33%;
+  }
 }
 .menu__container h2 {
   margin: 35px 0 10px;
@@ -448,6 +476,12 @@ main {
   font-size: 19px;
   font-weight: 400;
   position: relative;
+}
+@media (min-width: 1200px) {
+  .menu__container h2 {
+    font-size: 21px;
+    margin: 35px 0 30px;
+  }
 }
 .menu__container h2::after {
   content: "";
@@ -486,6 +520,11 @@ main {
   overflow: hidden;
   transform: translateY(15px);
   opacity: 0;
+}
+@media (min-width: 1200px) {
+  .menu__container--box {
+    height: 80px;
+  }
 }
 .menu__container--box .left-container {
   width: 100%;
@@ -536,6 +575,15 @@ main {
 .menu--btnBox {
   width: 100%;
   padding: 50px 0;
+}
+@media (min-width: 1200px) {
+  .menu--btnBox {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+  }
 }
 .menu--btnBox button {
   width: 180px;
