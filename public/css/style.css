@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-.menu__container, .guide__box--number, .guide, .location__explorer--button, .location__explorer, .location__choice, header, .intro {
+.menu--btnBox, .menu__container, .guide__box--number, .guide, .location__explorer--button, .location__explorer, .location__choice, header, .intro {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -410,10 +410,14 @@ main {
 
 .presentation {
   width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 80px;
+  left: 0;
 }
 .presentation img {
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -421,7 +425,7 @@ main {
   position: relative;
   z-index: 2;
   max-width: 100%;
-  transform: translateY(-45px);
+  margin-top: 250px;
   border-radius: 40px 40px 0 0px;
   padding: 35px 0 0;
   background: #f6f6f6;
@@ -526,6 +530,28 @@ main {
 }
 .menu__container--box:hover .fa-circle-check {
   animation: check-rotate 0.3s forwards linear;
+}
+.menu--btnBox {
+  width: 100%;
+  padding: 50px 0;
+}
+.menu--btnBox button {
+  width: 180px;
+  height: 60px;
+  border-radius: 30px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.15);
+  border: none;
+  background: rgb(255, 121, 218);
+  background: linear-gradient(163deg, rgb(255, 121, 218) 1%, rgb(147, 86, 220) 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+}
+.menu--btnBox button:hover {
+  background: rgb(255, 121, 218);
+  background: linear-gradient(163deg, #e886e0 1%, #c87be0 100%);
+  box-shadow: 0 3px 15px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
