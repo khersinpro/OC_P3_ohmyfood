@@ -91,7 +91,8 @@
             justify-content: start;
             height: 72px;
             overflow: hidden;
-            transform: rotateY(15px);
+            transform: translateY(15px);
+            opacity: 0;
             .left-container{
                 width: 100%;
                 margin: 0 25px 0 15px;

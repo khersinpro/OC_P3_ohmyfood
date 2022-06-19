@@ -53,10 +53,11 @@ a {
   }
 }
 .intro {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: fixed;
-  background: rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.75);
   opacity: 0;
   animation: fadeIn 3s;
   visibility: hidden;
@@ -65,8 +66,8 @@ a {
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  border: 10px white solid;
-  border-left: 10px yellow solid;
+  border: 10px #99E2D0 solid;
+  border-left: 10px #9356DC solid;
   animation: rotate 3 1s linear;
 }
 
@@ -483,7 +484,8 @@ main {
   justify-content: start;
   height: 72px;
   overflow: hidden;
-  transform: rotateY(15px);
+  transform: translateY(15px);
+  opacity: 0;
 }
 .menu__container--box .left-container {
   width: 100%;
