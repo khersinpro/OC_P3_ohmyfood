@@ -11,7 +11,7 @@
         visibility: visible;
         opacity: 1;
     }
-    50%{
+    70%{
         opacity: 1;
     }
     100%{
@@ -26,9 +26,8 @@
     z-index: 10;
     background: rgba(255, 255, 255, 0.75);
     @extend %flex-center;
-    opacity: 0;
-    animation: fadeIn  3s;
-    visibility: hidden;
+    opacity: 1;
+    animation: fadeIn  3s forwards;
     &__loader{
         height: 100px;
         width: 100px;

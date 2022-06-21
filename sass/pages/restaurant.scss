@@ -1,26 +1,8 @@
-@keyframes check-rotate {
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-}
-@keyframes list-anim {
-    from{
-        transform: translateY(15px);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-}
-
-
+//*** RESTAURANT MENU SECTION WITH LIST STAGGER ANIM + HOVER VALIDATE ANIM***//
 .restaurant-main{
     background: $light-grey;
 }
+//*** top image presentation ***//
 .presentation{
     width: 100%;
     height: 300px;
@@ -33,7 +15,7 @@
         object-fit: cover;
     }
 }
-
+//*** menu container ***//
 .menu{
     position: relative;
     z-index: 2;
@@ -68,13 +50,7 @@
             }
         }
     }
-
-    @for $i from 1 through 10 {
-        .list-anim#{$i} {
-            animation: list-anim 0.5s ease-in-out forwards;
-            animation-delay: 100ms * $i;
-        }
-    }
+    //*** liste container ***//
     &__container{
         @extend %flex-center;
         flex-direction: column;
@@ -102,8 +78,14 @@
             left: 1px;
             bottom: -4px;
         }
-        //*** liste animation ***//
-
+        //*** liste animation stagger ***//
+        @for $i from 1 through 10 {
+            .list-anim#{$i} {
+                animation: list-anim 0.5s ease-in-out forwards;
+                animation-delay: 100ms * $i;
+            }
+        }
+        //*** menu liste ***//
         &--box{
             width: 90%;
             margin: 10px 0;
@@ -117,6 +99,7 @@
             overflow: hidden;
             transform: translateY(15px);
             opacity: 0;
+            cursor: pointer;
             @media(min-width: $desktop-menu){
                 height: 80px;
             }
@@ -149,6 +132,7 @@
                     }
                 }
             }
+            //*** validation animation with check-rotate animation hover ***//
             .anim-box{
                 background: $tertiary;
                 height: 100%;
@@ -171,6 +155,7 @@
             }
         }
     }
+    //*** animation hover button ***//
     &--btnBox{
         width: 100%;
         padding: 50px 0;

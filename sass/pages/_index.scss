@@ -1,15 +1,13 @@
-//*** HOMEPAGE + HEART ANIM ***//
+//*** HOMEPAGE ***//
 main{
     height: 100%;
     width: 100%;
 }
-
-//*** Sextion with location user, presentation ***
+//*** Section with location user, presentation ***
 .location{
     height: auto;
     width: 100%;
-
-    //*** user location ***//
+    //*** user location box ***//
     &__choice{
         height: 50px;
         width: 100%;
@@ -27,7 +25,7 @@ main{
         }
     }
 
-    //*** presentation + button effect ***//
+    //*** presentation + button effect hover***//
     &__explorer{
         width: 100%;
         padding: 35px 10%;
@@ -141,7 +139,7 @@ main{
     }
 }
 
-//*** restaurant section with restuarant card and heart animation ***//
+//*** restaurant section with restaurant card and heart animation ***//
 .restaurant{
     width: 100%;
     padding: 35px 0 55px;
@@ -178,7 +176,6 @@ main{
             transform: translateX(-50%);
         }
     }
-
     //*** restaurant card ***//
     &__box{
         height: 100%;

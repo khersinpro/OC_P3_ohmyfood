@@ -31,3 +31,23 @@
         opacity: 0;
     }
 }
+
+//*** list stagger and validation keyframe ***//
+@keyframes check-rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes list-anim {
+    from{
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
