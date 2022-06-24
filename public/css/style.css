@@ -1,20 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-.menu--btnBox, .menu__container, .guide__box--number, .guide, .location__explorer--button, .location__explorer, .location__choice, header, .intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu__container--box .left-container .names, .menu .titleContainer, .restaurant__box--txt {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.menu .titleContainer h1 {
-  font-family: "Shrikhand", cursive;
-}
-
 .heart-container {
   border: none;
   background-color: transparent;
@@ -33,19 +17,20 @@
 .heart-container .colored {
   opacity: 0;
   transition: 0.3s ease-in-out;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .heart-container .nocolor {
   transition: 0.3s ease-in;
   color: #000;
 }
-.heart-container:hover .colored {
-  opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .heart-container:hover .nocolor {
   opacity: 0;
+}
+.heart-container:hover .colored {
+  opacity: 1;
 }
 
 @keyframes check-rotate {
@@ -66,22 +51,6 @@
     opacity: 1;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-body {
-  min-height: 100vh;
-  position: relative;
-}
-
-a {
-  text-decoration: none;
-}
-
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -109,6 +78,9 @@ a {
   position: fixed;
   z-index: 10;
   background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 1;
   animation: fadeIn 3s forwards;
 }
@@ -121,9 +93,28 @@ a {
   animation: rotate 3 1s linear;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
 header {
   width: 100%;
   height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   padding: 10px 0 10px;
   position: relative;
@@ -190,6 +181,9 @@ main {
   height: 50px;
   width: 100%;
   background: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .location__choice i {
   font-size: 18px;
@@ -206,6 +200,9 @@ main {
   padding: 35px 10%;
   text-align: center;
   background: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .location__explorer h1 {
@@ -222,6 +219,9 @@ main {
   height: 60px;
   width: 100%;
   max-width: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 15px;
   border-radius: 30px;
   border: none;
@@ -240,6 +240,9 @@ main {
 
 .guide {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   padding: 35px 0px;
 }
@@ -301,6 +304,9 @@ main {
   font-weight: 500;
   background: #9356DC;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: -12.5px;
   top: 50%;
@@ -400,6 +406,9 @@ main {
   width: 100%;
   height: 80px;
   padding: 0 20px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .restaurant__box--txt .textbox {
   color: #000;
@@ -449,6 +458,9 @@ main {
 .menu .titleContainer {
   width: 90%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 @media (min-width: 1200px) {
   .menu .titleContainer {
@@ -460,6 +472,7 @@ main {
   }
 }
 .menu .titleContainer h1 {
+  font-family: "Shrikhand", cursive;
   font-size: 24px;
 }
 @media (min-width: 1200px) {
@@ -468,6 +481,9 @@ main {
   }
 }
 .menu__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   width: 100%;
 }
@@ -574,6 +590,11 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.menu__container--box .left-container .names {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .menu__container--box .left-container .names--txt {
   margin-right: 15px;
   font-size: 15px;
@@ -607,6 +628,9 @@ main {
 .menu--btnBox {
   width: 100%;
   padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (min-width: 1200px) {
   .menu--btnBox {

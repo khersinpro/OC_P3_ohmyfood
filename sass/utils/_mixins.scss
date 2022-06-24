@@ -1,13 +1,15 @@
-%flex-center {
+@mixin title-font{
+    font-family: 'Shrikhand', cursive;
+}
+
+@mixin flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-%flex-between{
+
+@mixin flex-between {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-%title-font{
-    font-family: 'Shrikhand', cursive;
 }

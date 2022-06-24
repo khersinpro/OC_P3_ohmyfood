@@ -12,7 +12,7 @@ main{
         height: 50px;
         width: 100%;
         background: $grey;
-        @extend %flex-center;
+        @include flex-center;
         i{
             font-size: 18px;
             color: $dark-grey;
@@ -31,7 +31,7 @@ main{
         padding: 35px 10%;
         text-align: center;
         background: $light-grey;
-        @extend %flex-center;
+        @include flex-center;
         flex-direction: column;
         h1{
             font-size: 26px;
@@ -47,7 +47,7 @@ main{
             height: 60px;
             width: 100%;
             max-width: 270px;
-            @extend %flex-center;
+            @include flex-center;
             margin-bottom: 15px;
             border-radius: 30px;
             border: none;
@@ -69,7 +69,7 @@ main{
 //*** section with user guide ***//
 .guide{
     width: 100%;
-    @extend %flex-center;
+    @include flex-center;
     flex-direction: column;
     padding: 35px 0px;
     @media(min-width: $desktop){
@@ -119,7 +119,7 @@ main{
             font-weight: 500;
             background: $primary;
             border-radius: 50%;
-            @extend %flex-center;
+            @include flex-center;
             position: absolute;
             left: -12.5px;
             top: 50%;
@@ -209,7 +209,7 @@ main{
             width: 100%;
             height: 80px;
             padding: 0 20px 0 10px;
-            @extend %flex-between;
+            @include flex-between;
             .textbox{
                 color: #000;
                 h3{

@@ -34,7 +34,7 @@
     .titleContainer{
         width: 90%;
         margin: 0 auto;
-        @extend %flex-between;
+        @include flex-between;
         @media(min-width: $desktop-menu){
             position: absolute;
             top: 50px;
@@ -43,7 +43,7 @@
             width: 400px;
         }
         h1{
-            @extend %title-font;
+            @include title-font;
             font-size: 24px;
             @media(min-width: $desktop-menu){
                 font-size: 30px;
@@ -52,7 +52,7 @@
     }
     //*** liste container ***//
     &__container{
-        @extend %flex-center;
+        @include flex-center;
         flex-direction: column;
         width: 100%;
         @media(min-width: $desktop-menu){
@@ -119,7 +119,7 @@
                     overflow: hidden;
                 }
                 .names{
-                    @extend %flex-between;
+                    @include flex-between;
                     &--txt{
                         margin-right: 15px;
                         font-size: 15px;
@@ -159,7 +159,7 @@
     &--btnBox{
         width: 100%;
         padding: 50px 0;
-        @extend %flex-center;
+        @include flex-center;
         @media(min-width: $desktop-menu){
             position: absolute;
             bottom: 0px;

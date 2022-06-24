@@ -1,5 +1,5 @@
  //*** button with heart annimation ***//
- .heart-container{
+.heart-container{
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -16,19 +16,20 @@
     .colored{
         opacity: 0;
         transition:  0.3s ease-in-out;
+        color: transparent;
+        background: -webkit-gradient(linear, left top, left bottom, from($primary), to($secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     .nocolor{
         transition: 0.3s ease-in;
         color: #000;
     }
-    &:hover .colored{
-        opacity: 1;
-        background: -webkit-gradient(linear, left top, left bottom, from($secondary), to($primary));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
     &:hover .nocolor{
         opacity: 0;
+    }
+    &:hover .colored{
+        opacity: 1;
     }
 }
 
@@ -49,5 +50,46 @@
     to{
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+//*** Loader ***//
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes fadeIn {
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.intro{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.75);
+    @include flex-center;
+    opacity: 1;
+    animation: fadeIn  3s forwards;
+    &__loader{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 10px $tertiary solid;
+        border-left: 10px $primary solid;
+        animation: rotate 3 1s linear;
     }
 }
